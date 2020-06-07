@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "calendar-test",
-    "slug": "calendar-test",
+    "name": "calendar-daily-history",
+    "slug": "calendar-daily-history",
     "platforms": [
       "ios",
       "android",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
-    }
+    },
+    "description": "",
+    "githubUrl": "https://github.com/popadorin/calendar-daily-history"
   }
 }
