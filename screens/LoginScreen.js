@@ -5,7 +5,7 @@ import {AuthContext} from "../navigation/AppNavigator";
 export default function LoginScreen() {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
-  const {signIn} = React.useContext(AuthContext);
+  const {signIn, error} = React.useContext(AuthContext);
 
   return (
     <View style={styles.container}>
@@ -32,6 +32,7 @@ export default function LoginScreen() {
       <TouchableOpacity>
         <Text style={styles.forgot}>Forgot Password?</Text>
       </TouchableOpacity>
+      <Text style={styles.error}>{error}</Text>
       <TouchableOpacity
         style={styles.loginBtn}
         onPress={() => signIn({username, password})}
@@ -87,5 +88,10 @@ const styles = StyleSheet.create({
   },
   loginText: {
     color: "white"
+  },
+  error: {
+    marginTop: 20,
+    marginBottom: -30,
+    color: 'red'
   }
 });

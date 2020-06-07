@@ -84,8 +84,9 @@ export default function AppNavigator({navigation}) {
       signUp: async data => {
         dispatch({type: 'SIGN_IN', token: 'dummy-auth-token'});
       },
+      error: state.error
     }),
-    []
+    [state.error]
   );
 
   return (
